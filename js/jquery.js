@@ -11,11 +11,15 @@ function time() {
     };
     
     function checkTime(i) {
-      if(i < 0) {
+      if(i < 10) {
           i = '0' + i;
-      };
+      }
         return i;
     };
+    
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    
     setTimeout(time, 1000);
 //get elem with id time
     document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
